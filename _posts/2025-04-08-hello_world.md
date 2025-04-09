@@ -24,6 +24,30 @@ This approach simplifies upgrades, isolates unnecessary files, and is perfect fo
 
 ### Option 2. Forking the Theme
 
+```mermaid
+gitGraph
+        commit
+        commit
+        branch develop
+        commit
+        branch feature/one
+        checkout feature/one
+        commit
+        commit
+        checkout develop
+        merge feature/one
+        commit
+        branch feature/two
+        checkout feature/two
+        commit
+        commit
+        checkout develop
+        merge feature/two
+        checkout main
+        merge develop
+        commit
+```
+
 This approach is convenient for modifying features or UI design, but presents challenges during upgrades. So don't try this unless you are familiar with Jekyll and plan to heavily modify this theme.
 
 1. Sign in to GitHub.
