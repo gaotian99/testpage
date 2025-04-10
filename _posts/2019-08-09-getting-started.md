@@ -4,10 +4,11 @@ description: >-
   Get started with Chirpy basics in this comprehensive overview.
   You will learn how to install, configure, and use your first Chirpy-based website, as well as deploy it to a web server.
 author: cotes
-date: 2025-04-08 20:55:00 +0800
+date: 2019-08-09 20:55:00 +0800
 categories: [Blogging, Tutorial]
 tags: [getting started]
 pin: true
+media_subpath: '/posts/20180809'
 ---
 
 ## Creating a Site Repository
@@ -24,39 +25,7 @@ This approach simplifies upgrades, isolates unnecessary files, and is perfect fo
 
 ### Option 2. Forking the Theme
 
-```mermaid
-gitGraph
-        commit
-        commit
-        branch develop
-        commit
-        branch feature/one
-        checkout feature/one
-        commit
-        commit
-        checkout develop
-        merge feature/one
-        commit
-        branch feature/two
-        checkout feature/two
-        commit
-        commit
-        checkout develop
-        merge feature/two
-        checkout main
-        merge develop
-        commit
-```
-
 This approach is convenient for modifying features or UI design, but presents challenges during upgrades. So don't try this unless you are familiar with Jekyll and plan to heavily modify this theme.
-
-{% mermaid %}
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-{% endmermaid %}
 
 1. Sign in to GitHub.
 2. [Fork the theme repository](https://github.com/cotes2020/jekyll-theme-chirpy/fork).
