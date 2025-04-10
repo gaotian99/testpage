@@ -30,6 +30,19 @@ graph LR
 </pre>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
 
+<pre class="mermaid">
+graph TD;
+    A[Client sends bulk PIN query] -->|Check validity| B{Valid request?}
+    B -- No ❌ --> C[⚠️ Return error response to client]
+    B -- Yes ✅ --> D[Split bulk request into groups of 100]
+    D -->|Parallel processing ⚡| E[Send requests to API]
+    E -->|Processing... ⏳| F{All responses received?}
+    F -- No ⏳ --> E
+    F -- Yes ✅ --> G[ Aggregate all responses]
+    G --> H[ Return final response to client]
+</pre>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+
 This approach is convenient for modifying features or UI design, but presents challenges during upgrades. So don't try this unless you are familiar with Jekyll and plan to heavily modify this theme.
 
 1. Sign in to GitHub.
