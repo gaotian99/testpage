@@ -50,6 +50,14 @@ gitGraph
 
 This approach is convenient for modifying features or UI design, but presents challenges during upgrades. So don't try this unless you are familiar with Jekyll and plan to heavily modify this theme.
 
+{% mermaid %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% endmermaid %}
+
 1. Sign in to GitHub.
 2. [Fork the theme repository](https://github.com/cotes2020/jekyll-theme-chirpy/fork).
 3. Name the new repository `<username>.github.io`, replacing `username` with your lowercase GitHub username.
